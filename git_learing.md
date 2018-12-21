@@ -60,4 +60,13 @@ $ git merge --no-ff -m "merge with no-ff" dev
 ## Rebase（有坑，慎用，会回退不了版本）
 1. rebase操作可以把本地未push的分叉提交历史整理成直线；
 2. rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
+## 创建标签
+1. 命令git tag <tagname>用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+2. 命令git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+3. 命令git tag可以查看所有标签。
+## 操作标签
+1. 命令git push origin <tagname>可以推送一个本地标签；
+2. 命令git push origin --tags可以推送全部未推送过的本地标签；
+3. 命令git tag -d <tagname>可以删除一个本地标签；
+4. 命令git push origin :refs/tags/<tagname>可以删除一个远程标签。
 
